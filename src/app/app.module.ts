@@ -40,6 +40,7 @@ import { CompanyComponent } from './Pages/company/company.component';
 import { ProyektComponent } from './Pages/proyekt/proyekt.component';
 import { ProyektDetailComponent } from './Pages/proyekt-detail/proyekt-detail.component';
 import { DetailCarauselComponent } from './Pages/proyekt-detail/detail-carausel/detail-carausel.component';
+import { KartochkaComponent } from './Pages/kartochka/kartochka.component';
 import { UslugiComponent } from './Pages/uslugi/uslugi.component';
 import { UslugiMainPageComponent } from './Pages/uslugi/uslugi-components/uslugi-main-page/uslugi-main-page.component';
 import { ZashitaProektiComponent } from './Pages/zashita-proekti/zashita-proekti.component';
@@ -52,6 +53,7 @@ import { DIAComponent } from './Pages/d-i-a/d-i-a.component';
 import { DIAMainPageComponent } from './Pages/d-i-a/d-i-a-components/d-i-a-main-page/d-i-a-main-page.component';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import { EmailRequestComponent } from './Pages/email-request/email-request.component';
+
 
 @NgModule({
   declarations: [
@@ -80,6 +82,11 @@ import { EmailRequestComponent } from './Pages/email-request/email-request.compo
     CompanyComponent,
     ProyektComponent,
     ProyektDetailComponent,
+    DetailCarauselComponent,
+    KartochkaComponent,
+    DetailCarauselComponent,
+    UslugiComponent,
+    UslugiMainPageComponent
     DetailCarauselComponent,
     UslugiComponent,
     UslugiMainPageComponent,
