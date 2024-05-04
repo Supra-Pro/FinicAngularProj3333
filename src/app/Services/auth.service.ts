@@ -10,6 +10,10 @@ import { RegisterRequest } from '../Interfaces/register-request';
 import { RegisterResponse } from '../Interfaces/register-response'; 
 import { UpdateUser } from '../Interfaces/update-request';
 import { Email } from '../Interfaces/email';
+import { Proyekt } from '../Interfaces/proyekt';
+import { Catigory } from '../Interfaces/catigory';
+import { Portfolio } from '../Interfaces/portfolio';
+import { ProyektDTO } from '../Interfaces/proyekt-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -76,4 +80,46 @@ export class AuthService {
     this.router.navigate(['/login'])
     return false;
   }
+
+  // ulaaaaash =================>>>>  proyekts
+
+  proyektUrl: string = "https://localhost:7052/api/";
+
+  proyekt?:Proyekt;
+
+  getAllProyekts(): Observable<Proyekt[]> {
+    return this.http.get<Proyekt[]>(this.proyektUrl + 'Projects/GetAllProjects');
+  }
+  getAllCatigories(): Observable<string[]> { 
+    return this.http.get<string[]>(this.proyektUrl + 'Projects/GetAllCategories');
+  }
+
+  createProyekt(data: ProyektDTO): Observable<ProyektDTO> { 
+    return this.http.post<ProyektDTO>(this.proyektUrl + 'Projects/CreateProject', data);
+  }
+
+  // getByIdProyekt(id: number): Observable<CreateUser> {
+  //   return this.http.get<CreateUser>(this.baseUrl + `GetIdPerson?id=${id}`)
+  // }
+
+  // updateProyekt(id: number, data: CreateUser): Observable<CreateUser> {
+  //   return this.http.put<CreateUser>(this.baseUrl + `UpdatePerson?id=${id}`, data)
+  // }
+
+  // deleteProyekt(id: number): Observable<number> {
+  //   return this.http.delete<number>(this.baseUrl + `DeletePerson?id=${id}`)
+  // }
+
+
+
+  // ulaaaaash =================>>>>  portfolios
+  portfolioUrl: string = "https://localhost:7163/api/";
+
+  portfolio?:Portfolio;
+
+  getAllPortfolios(): Observable<Portfolio[]> {
+    return this.http.get<Portfolio[]>(this.portfolioUrl + 'Portfolio/GetAllPortfolios');
+  }
+
+
 }

@@ -6,131 +6,26 @@
     <p style="padding-top: 20px;"><span style="color: gray;padding-left: 15px;">Главная</span> —  Новости</p>
     <h2 class="product-category">Новости</h2>
     <div class="categories">
-        <button class="proyekt_text">Все (45)</button>
-        <button class="proyekt_text">Уличное (6)</button>
-        <button class="proyekt_text">Промышленное (20)</button>
-        <button class="proyekt_text">Интерьерное (1)</button>
-        <button class="proyekt_text">Ретейл (15)</button>
-        <button class="proyekt_text">Медицинское (3)</button>
+      @for (item of categories; track item) {
+        <button class="proyekt_text">{{item}}</button>
+      }
     </div>
     <ul class="cards">
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
+      @for (item of projects; track item) {
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
+            <div class="card_content">
+              <p style="font-size: 15px;color: gray;">{{item.category}}</p>
+              <h2 class="card_title">{{item.title}}</h2>
+              <p class="card_text">{{item.body}}</p>
+              <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                </svg></button>
+            </div>
           </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magnfcghvjbkngyfcvhbnjhugyfigyhvbjnjkjhugyvhbjnkjhguvba aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
-      <li class="cards_item">
-        <div class="card">
-          <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
-          <div class="card_content">
-            <p style="font-size: 15px;color: gray;">17/10/22</p>
-            <h2 class="card_title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
-            <p class="card_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-            <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-              </svg></button>
-          </div>
-        </div>
-      </li>
+        </li>
+      }
     </ul>
   </div>
 

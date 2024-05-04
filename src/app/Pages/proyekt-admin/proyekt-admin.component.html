@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="main">
+    <p style="padding-top: 20px;"><span style="color: gray;padding-left: 15px;">Главная</span> —  Новости</p>
+    <h2 class="product-category">Новости</h2>
+
+    
+
+<form class="max-w-sm mx-auto">
+    <h1>New Proyekt</h1>
+    <div class="mb-5">
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload file</label>
+    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
+    </div>
+    <div class="mb-5">
+      <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+      <input type="category" id="category" name="category" [(ngModel)]="setValue.category" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+    </div>
+    <div class="mb-5">
+      <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="setValue.title" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+    </div>
+    <div class="mb-5">
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Body</label>
+        <textarea id="message" name="message" rows="4" [(ngModel)]="setValue.body" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>           
+    </div>
+    <button type="submit" (click)="setProyekt()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create New Project</button>
+  </form>  
+
+
+    <div class="categories">
+      @for (item of categories; track item) {
+        <button class="proyekt_text">{{item}}</button>
+      }
+    </div>
+    <ul class="cards">
+      @for (item of projects; track item) {
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="assets/images/novosti-main-img.png"></div>
+            <div class="card_content">
+              <p style="font-size: 15px;color: gray;">{{item.category}}</p>
+              <h2 class="card_title">{{item.title}}</h2>
+              <p class="card_text">{{item.body}}</p>
+              <button>Читать <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                </svg></button>
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+
+
+  <app-footer></app-footer>

@@ -12,83 +12,20 @@
     <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
     <div class="product-container">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
+        @for (item of portfolios; track item) {
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
+                    <div class="discount-tag">
+                        <h2 class="product-brand">{{item.title}}</h2>
+                        <p class="product-desc">{{item.body}}</p>
+                        <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                          </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/homa-cards-carousel-img.png" class="product-thumb" alt="">
-                <div class="discount-tag">
-                    <h2 class="product-brand">Уличное</h2>
-                    <p class="product-desc">Тюбинг парк Билайн Парк Горького</p>
-                    <a>Подробнее <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </section>

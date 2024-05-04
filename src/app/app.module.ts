@@ -53,6 +53,7 @@ import { DIAComponent } from './Pages/d-i-a/d-i-a.component';
 import { DIAMainPageComponent } from './Pages/d-i-a/d-i-a-components/d-i-a-main-page/d-i-a-main-page.component';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import { EmailRequestComponent } from './Pages/email-request/email-request.component';
+import { ProyektAdminComponent } from './Pages/proyekt-admin/proyekt-admin.component';
 
 
 @NgModule({
@@ -86,7 +87,7 @@ import { EmailRequestComponent } from './Pages/email-request/email-request.compo
     KartochkaComponent,
     DetailCarauselComponent,
     UslugiComponent,
-    UslugiMainPageComponent
+    UslugiMainPageComponent,
     DetailCarauselComponent,
     UslugiComponent,
     UslugiMainPageComponent,
@@ -100,7 +101,8 @@ import { EmailRequestComponent } from './Pages/email-request/email-request.compo
     DIAComponent,
     DIAMainPageComponent,
     ResetPasswordComponent,
-    EmailRequestComponent
+    EmailRequestComponent,
+    ProyektAdminComponent
   ],
   imports: [
     BrowserModule,
