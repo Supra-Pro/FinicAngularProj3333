@@ -80,11 +80,11 @@ export const userGuard: CanActivateFn = (route, state) => {
     const element = data[index];
     if(element == 'Admin') {
       console.log('Navigated to users');
-      router.navigate(['/login'])
+      router.navigate(['/admin-profile'])
       return true
-    } else if(element == 'Student') {
+    } else if(element == 'User') {
       console.log('student profilega navigate');
-      router.navigate(['/student-profile'])
+      router.navigate(['/user-profile'])
       return true
     }
   }
