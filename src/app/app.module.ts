@@ -54,6 +54,7 @@ import { DIAMainPageComponent } from './Pages/d-i-a/d-i-a-components/d-i-a-main-
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import { EmailRequestComponent } from './Pages/email-request/email-request.component';
 import { ProyektAdminComponent } from './Pages/proyekt-admin/proyekt-admin.component';
+import { CompComponent } from './Pages/comp/comp.component';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { ProyektAdminComponent } from './Pages/proyekt-admin/proyekt-admin.compo
     DIAMainPageComponent,
     ResetPasswordComponent,
     EmailRequestComponent,
-    ProyektAdminComponent
+    ProyektAdminComponent,
+    CompComponent
   ],
   imports: [
     BrowserModule,

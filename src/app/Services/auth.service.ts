@@ -14,6 +14,7 @@ import { Proyekt } from '../Interfaces/proyekt';
 import { Catigory } from '../Interfaces/catigory';
 import { Portfolio } from '../Interfaces/portfolio';
 import { ProyektDTO } from '../Interfaces/proyekt-dto';
+import { Contact } from '../Interfaces/contact';
 
 @Injectable({
   providedIn: 'root'
@@ -119,6 +120,18 @@ export class AuthService {
 
   getAllPortfolios(): Observable<Portfolio[]> {
     return this.http.get<Portfolio[]>(this.portfolioUrl + 'Portfolio/GetAllPortfolios');
+  }
+
+
+  // ulaaaaash =================>>>>  contacts
+
+
+  contactUrl: string = "https://localhost:7217/api/";
+
+  contact?:Contact;
+
+  createContact(data: Contact): Observable<Contact> { 
+    return this.http.post<Contact>(this.contactUrl + 'ContactPageRequests/CreateUserRequest', data);
   }
 
 
