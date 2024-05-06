@@ -35,7 +35,7 @@ const routes: Routes = [
   {path: 'reset', component: ResetPasswordComponent},
   {path: 'main-navbar', component: MainNavbarComponent},
   {path: 'comp',  component: CompComponent},
-  {path: 'emailRequest', component: EmailRequestComponent}, // guard needed
+  {path: 'emailRequest', component: EmailRequestComponent}, 
   {path: 'user-profile', component: UserProfileComponent, canActivate: [userGuard]}, // guard needed
   {path: 'admin-profile', component: AdminProfileComponent, canActivate: [loginGuard]},
   {path: 'catalog', component: ProyektAdminComponent, canActivate: [catalogGuard]}, // to be fixed
