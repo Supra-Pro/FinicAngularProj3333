@@ -15,6 +15,8 @@ import { ZashitaProektiComponent } from './Pages/zashita-proekti/zashita-proekti
 import { ProyektComponent } from './Pages/proyekt/proyekt.component';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import { EmailRequestComponent } from './Pages/email-request/email-request.component';
+import { GdeKupitComponent } from './Pages/gde-kupit/gde-kupit.component';
+import { ProyektAdminComponent } from './Pages/proyekt-admin/proyekt-admin.component';
 
 
 const routes: Routes = [
@@ -24,16 +26,17 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent, canActivate: [registerGuard]},
   {path: 'reset', component: ResetPasswordComponent},
   {path: 'emailRequest', component: EmailRequestComponent}, // guard needed
-  {path: 'user-profile', component: UserProfileComponent}, // guard needed
-  {path: 'admin-profile', component: AdminProfileComponent},
-  {path: 'catalog', component: CompanyComponent, canActivate: [catalogGuard]}, // to be fixed
+  {path: 'user-profile', component: UserProfileComponent, canActivate: [userGuard]}, // guard needed
+  {path: 'admin-profile', component: AdminProfileComponent, canActivate: [loginGuard]},
+  {path: 'catalog', component: ProyektAdminComponent, canActivate: [catalogGuard]}, // to be fixed
   {path: 'company', component: CompanyComponent, canActivate: [companyGuard]},
-  {path: 'shopping', component: CompanyComponent, canActivate: [shoppingGuard]}, // to be fixed
+  {path: 'shopping', component: GdeKupitComponent, canActivate: [shoppingGuard]}, // to be fixed
   {path: 'novosti', component: NovostiComponent, canActivate: [novostiGuard]},
   {path: 'contact', component: KontaktComponent, canActivate: [contactGuard]},
   {path: 'uslogi', component: UslugiComponent, canActivate: [uslogiGuard]},
   {path: 'zashita-proekti', component: ZashitaProektiComponent, canActivate: [zashitaproektiGuard]},
   {path: 'proyekt', component: ProyektComponent, canActivate: [proyektGuard]},
+  {path: 'proyekt-admin', component: ProyektAdminComponent, canActivate: [proyektGuard]},
   {path: 'proyekt-detail', component: ProyektComponent, canActivate: [proyektdetailsGuard]},
   {path: '**', component: HomeComponent, canActivate: []}
 ];
